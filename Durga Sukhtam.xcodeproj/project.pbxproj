@@ -14,6 +14,7 @@
 		352189631DB90255004B9BE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 352189611DB90255004B9BE7 /* LaunchScreen.storyboard */; };
 		3521896E1DB90255004B9BE7 /* Durga_SukhtamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3521896D1DB90255004B9BE7 /* Durga_SukhtamTests.swift */; };
 		352189791DB90255004B9BE7 /* Durga_SukhtamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352189781DB90255004B9BE7 /* Durga_SukhtamUITests.swift */; };
+		352189891DBA640B004B9BE7 /* LearnVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352189881DBA640B004B9BE7 /* LearnVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		352189741DB90255004B9BE7 /* Durga SukhtamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Durga SukhtamUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		352189781DB90255004B9BE7 /* Durga_SukhtamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Durga_SukhtamUITests.swift; sourceTree = "<group>"; };
 		3521897A1DB90255004B9BE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		352189881DBA640B004B9BE7 /* LearnVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LearnVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +99,10 @@
 		352189571DB90255004B9BE7 /* Durga Sukhtam */ = {
 			isa = PBXGroup;
 			children = (
-				352189581DB90255004B9BE7 /* AppDelegate.swift */,
+				352189871DBA621D004B9BE7 /* Supporting Files */,
 				3521895A1DB90255004B9BE7 /* ViewController.swift */,
+				352189881DBA640B004B9BE7 /* LearnVC.swift */,
 				3521895C1DB90255004B9BE7 /* Main.storyboard */,
-				3521895F1DB90255004B9BE7 /* Assets.xcassets */,
-				352189611DB90255004B9BE7 /* LaunchScreen.storyboard */,
-				352189641DB90255004B9BE7 /* Info.plist */,
 			);
 			path = "Durga Sukhtam";
 			sourceTree = "<group>";
@@ -123,6 +123,17 @@
 				3521897A1DB90255004B9BE7 /* Info.plist */,
 			);
 			path = "Durga SukhtamUITests";
+			sourceTree = "<group>";
+		};
+		352189871DBA621D004B9BE7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				352189581DB90255004B9BE7 /* AppDelegate.swift */,
+				3521895F1DB90255004B9BE7 /* Assets.xcassets */,
+				352189611DB90255004B9BE7 /* LaunchScreen.storyboard */,
+				352189641DB90255004B9BE7 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +275,7 @@
 			files = (
 				3521895B1DB90255004B9BE7 /* ViewController.swift in Sources */,
 				352189591DB90255004B9BE7 /* AppDelegate.swift in Sources */,
+				352189891DBA640B004B9BE7 /* LearnVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +526,7 @@
 				3521897F1DB90255004B9BE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		352189801DB90255004B9BE7 /* Build configuration list for PBXNativeTarget "Durga SukhtamTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +535,7 @@
 				352189821DB90255004B9BE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		352189831DB90255004B9BE7 /* Build configuration list for PBXNativeTarget "Durga SukhtamUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +544,7 @@
 				352189851DB90255004B9BE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
