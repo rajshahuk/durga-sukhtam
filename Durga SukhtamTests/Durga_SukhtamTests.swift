@@ -21,9 +21,15 @@ class Durga_SukhtamTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testEmptyStanza() {
+        let s = Stanza(englishText: "", sanskritText: "", soundFile: "");
+        assert(s.englishText == "")
+        assert(s.sanskritText == "")
+        assert(s.soundFile == "")
+    }
+    
+    func testStanzaPlayer() {
+        StanzaPlayer.sharedInstance;
     }
     
     func testPerformanceExample() {
