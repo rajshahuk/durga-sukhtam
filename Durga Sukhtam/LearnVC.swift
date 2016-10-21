@@ -24,6 +24,15 @@ class LearnVC: UIViewController {
         super.viewDidLoad()
         self.title! = "Learn"
         loadStanzaIntoView(index: currentIndex)
+        
+        // swipes stuff
+        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipes))
+        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipes))
+        leftSwipe.direction = .left
+        rightSwipe.direction = .right
+        self.view.addGestureRecognizer(leftSwipe)
+        self.view.addGestureRecognizer(rightSwipe)
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -39,13 +48,7 @@ class LearnVC: UIViewController {
         sanskritTextView.text = s.sanskritText;
     }
     
-    // MARK: UI actions
-    @IBAction func playButtonPressed(_ sender: UIBarButtonItem) {
-        print("Play Pressed");
-    }
-    
-    @IBAction func forwardButtonPressed(_ sender: UIBarButtonItem) {
-        print("Forward Pressed")
+    func next() {
         if (currentIndex < stanzas.count-1) {
             currentIndex += 1;
         }
@@ -57,8 +60,7 @@ class LearnVC: UIViewController {
         UIView.transition(with: englishTextView, duration: 1, options: UIViewAnimationOptions.transitionFlipFromLeft, animations: nil, completion: nil)
     }
     
-    @IBAction func remindButtonPressed(_ sender: UIBarButtonItem) {
-        print("Rewind Pressed")
+    func previous() {
         if (currentIndex > 0) {
             currentIndex -= 1;
         }
@@ -68,6 +70,32 @@ class LearnVC: UIViewController {
         loadStanzaIntoView(index: currentIndex)
         UIView.transition(with: sanskritTextView, duration: 1, options: UIViewAnimationOptions.transitionFlipFromRight, animations: nil, completion: nil)
         UIView.transition(with: englishTextView, duration: 1, options: UIViewAnimationOptions.transitionFlipFromRight, animations: nil, completion: nil)
+
+    }
+    
+    // MARK: UI actions
+    @IBAction func playButtonPressed(_ sender: UIBarButtonItem) {
+        print("Play Pressed")
+    }
+    
+    @IBAction func forwardButtonPressed(_ sender: UIBarButtonItem) {
+        print("Forward Pressed")
+        next()
+    }
+    
+    @IBAction func remindButtonPressed(_ sender: UIBarButtonItem) {
+        print("Rewind Pressed")
+        previous()
+    }
+    
+    func handleSwipes(sender :UISwipeGestureRecognizer) {
+        if (sender.direction == .left) {
+            previous()
+        }
+        if (sender.direction == .right) {
+            next()
+        }
+        
     }
     
 }
