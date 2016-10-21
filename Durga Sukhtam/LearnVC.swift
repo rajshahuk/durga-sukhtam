@@ -53,6 +53,8 @@ class LearnVC: UIViewController {
             currentIndex = 0;
         }
         loadStanzaIntoView(index: currentIndex)
+        UIView.transition(with: sanskritTextView, duration: 1, options: UIViewAnimationOptions.transitionFlipFromLeft, animations: nil, completion: nil)
+        UIView.transition(with: englishTextView, duration: 1, options: UIViewAnimationOptions.transitionFlipFromLeft, animations: nil, completion: nil)
     }
     
     @IBAction func remindButtonPressed(_ sender: UIBarButtonItem) {
