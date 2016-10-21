@@ -29,7 +29,8 @@ class Durga_SukhtamTests: XCTestCase {
     }
     
     func testStanzaPlayer() {
-        StanzaPlayer.sharedInstance;
+        let s = StanzaPlayer.sharedInstance.stanzas;
+        assert(s.count > 0, "Asserting that the size of stanzas in greater than 0");
     }
     
     func testPerformanceExample() {

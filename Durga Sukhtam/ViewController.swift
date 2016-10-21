@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        StanzaPlayer.sharedInstance;
+        let _ = StanzaPlayer.sharedInstance;
         self.title! = "Home"
         // Do any additional setup after loading the view, typically from a nib.
     }

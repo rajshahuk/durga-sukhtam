@@ -32,7 +32,6 @@ class StanzaPlayer {
                 let s = Stanza(englishText: eng[i] as! String,
                                sanskritText: san[i] as! String,
                                soundFile: mp3[i] as! String);
-                print("s = \(s)")
                 stanzas.append(s);
                 i += 1;
             }
