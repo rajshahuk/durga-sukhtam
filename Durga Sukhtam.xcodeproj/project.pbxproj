@@ -18,6 +18,7 @@
 		356F2FA01DBA81910089FA83 /* durga-sukhtam.plist in Resources */ = {isa = PBXBuildFile; fileRef = 356F2F9F1DBA81910089FA83 /* durga-sukhtam.plist */; };
 		356F2FA21DBA83040089FA83 /* Stanza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356F2FA11DBA83040089FA83 /* Stanza.swift */; };
 		356F2FA41DBA841D0089FA83 /* StanzaPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356F2FA31DBA841D0089FA83 /* StanzaPlayer.swift */; };
+		356F2FA61DBAD6160089FA83 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 356F2FA51DBAD6160089FA83 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		356F2F9F1DBA81910089FA83 /* durga-sukhtam.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "durga-sukhtam.plist"; sourceTree = "<group>"; };
 		356F2FA11DBA83040089FA83 /* Stanza.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stanza.swift; sourceTree = "<group>"; };
 		356F2FA31DBA841D0089FA83 /* StanzaPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StanzaPlayer.swift; sourceTree = "<group>"; };
+		356F2FA51DBAD6160089FA83 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 		352189571DB90255004B9BE7 /* Durga Sukhtam */ = {
 			isa = PBXGroup;
 			children = (
+				356F2FA51DBAD6160089FA83 /* README.md */,
 				352189871DBA621D004B9BE7 /* Supporting Files */,
 				3521895A1DB90255004B9BE7 /* ViewController.swift */,
 				352189881DBA640B004B9BE7 /* LearnVC.swift */,
@@ -215,6 +218,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = XKG94W6666;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					352189681DB90255004B9BE7 = {
 						CreatedOnToolsVersion = 8.0;
@@ -283,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				356F2FA61DBAD6160089FA83 /* README.md in Sources */,
 				356F2FA21DBA83040089FA83 /* Stanza.swift in Sources */,
 				3521895B1DB90255004B9BE7 /* ViewController.swift in Sources */,
 				352189591DB90255004B9BE7 /* AppDelegate.swift in Sources */,
