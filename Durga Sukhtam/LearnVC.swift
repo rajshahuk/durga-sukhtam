@@ -7,23 +7,29 @@
 //
 
 import UIKit
+import AVFoundation
 
-class LearnVC: UIViewController {
+class LearnVC: UIViewController, AVAudioPlayerDelegate {
     
     
     //MARK: UI Stuff
     @IBOutlet weak var stanzaLabel: UILabel!
     @IBOutlet weak var englishTextView: UITextView!
     @IBOutlet weak var sanskritTextView: UITextView!
+    @IBOutlet weak var playPauseButton: UIBarButtonItem!
     
     //MARK: Model needed for view
     let stanzas = StanzaPlayer.sharedInstance.stanzas;
     var currentIndex = 0;
     
+    var audioPlayer = AVAudioPlayer();
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title! = "Learn"
         loadStanzaIntoView(index: currentIndex)
+        
+        setupAudioPlayer()
         
         // swipes stuff
         let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipes))
@@ -58,6 +64,11 @@ class LearnVC: UIViewController {
         loadStanzaIntoView(index: currentIndex)
         UIView.transition(with: sanskritTextView, duration: 1, options: UIViewAnimationOptions.transitionFlipFromLeft, animations: nil, completion: nil)
         UIView.transition(with: englishTextView, duration: 1, options: UIViewAnimationOptions.transitionFlipFromLeft, animations: nil, completion: nil)
+        let isPlaying = audioPlayer.isPlaying;
+        setupAudioPlayer()
+        if (isPlaying) {
+            audioPlayer.play()
+        }
     }
     
     func previous() {
@@ -70,12 +81,25 @@ class LearnVC: UIViewController {
         loadStanzaIntoView(index: currentIndex)
         UIView.transition(with: sanskritTextView, duration: 1, options: UIViewAnimationOptions.transitionFlipFromRight, animations: nil, completion: nil)
         UIView.transition(with: englishTextView, duration: 1, options: UIViewAnimationOptions.transitionFlipFromRight, animations: nil, completion: nil)
+        let isPlaying = audioPlayer.isPlaying;
+        setupAudioPlayer()
+        if (isPlaying) {
+            audioPlayer.play()
+        }
 
     }
     
     // MARK: UI actions
     @IBAction func playButtonPressed(_ sender: UIBarButtonItem) {
         print("Play Pressed")
+        if (audioPlayer.isPlaying) {
+            audioPlayer.pause();
+            self.playPauseButton.image = #imageLiteral(resourceName: "play-button-bar")
+        }
+        else {
+            audioPlayer.play();
+            self.playPauseButton.image = #imageLiteral(resourceName: "pause-button-bar")
+        }
     }
     
     @IBAction func forwardButtonPressed(_ sender: UIBarButtonItem) {
@@ -94,6 +118,19 @@ class LearnVC: UIViewController {
         }
         if (sender.direction == .right) {
             next()
+        }
+    }
+    
+    func setupAudioPlayer() {
+        let path = Bundle.main.path(forResource: stanzas[currentIndex].soundFile + ".mp3", ofType: nil)!
+        let url = URL(fileURLWithPath: path)
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer.delegate = self
+            audioPlayer.prepareToPlay()
+        }
+        catch {
+            print(error)
         }
         
     }

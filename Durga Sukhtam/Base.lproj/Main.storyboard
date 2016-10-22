@@ -110,6 +110,7 @@
                     </view>
                     <connections>
                         <outlet property="englishTextView" destination="uFh-3q-Elu" id="TnK-7T-j5w"/>
+                        <outlet property="playPauseButton" destination="zzD-z9-CvU" id="zp6-3B-ldD"/>
                         <outlet property="sanskritTextView" destination="x14-fZ-xHy" id="wrY-oN-FRq"/>
                         <outlet property="stanzaLabel" destination="XC1-05-R8m" id="FMT-gi-pf7"/>
                     </connections>

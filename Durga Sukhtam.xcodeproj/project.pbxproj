@@ -15,6 +15,21 @@
 		3521896E1DB90255004B9BE7 /* Durga_SukhtamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3521896D1DB90255004B9BE7 /* Durga_SukhtamTests.swift */; };
 		352189791DB90255004B9BE7 /* Durga_SukhtamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352189781DB90255004B9BE7 /* Durga_SukhtamUITests.swift */; };
 		352189891DBA640B004B9BE7 /* LearnVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352189881DBA640B004B9BE7 /* LearnVC.swift */; };
+		355E34B71DBBA3280015691E /* 01 Durga Suktam 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355E34A81DBBA3280015691E /* 01 Durga Suktam 1.mp3 */; };
+		355E34B81DBBA3280015691E /* 02 Durga Suktam 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355E34A91DBBA3280015691E /* 02 Durga Suktam 2.mp3 */; };
+		355E34B91DBBA3280015691E /* 03 Durga Suktam 3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355E34AA1DBBA3280015691E /* 03 Durga Suktam 3.mp3 */; };
+		355E34BA1DBBA3280015691E /* 04 Durga Suktam 4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355E34AB1DBBA3280015691E /* 04 Durga Suktam 4.mp3 */; };
+		355E34BB1DBBA3280015691E /* 05 Durga Suktam 5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355E34AC1DBBA3280015691E /* 05 Durga Suktam 5.mp3 */; };
+		355E34BC1DBBA3280015691E /* 06 Durga Suktam 6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355E34AD1DBBA3280015691E /* 06 Durga Suktam 6.mp3 */; };
+		355E34BD1DBBA3280015691E /* 07 Durga Suktam 7.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355E34AE1DBBA3280015691E /* 07 Durga Suktam 7.mp3 */; };
+		355E34BE1DBBA3280015691E /* 08 Durga Suktam 8.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355E34AF1DBBA3280015691E /* 08 Durga Suktam 8.mp3 */; };
+		355E34BF1DBBA3280015691E /* 09 Durga Suktam 9.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355E34B01DBBA3280015691E /* 09 Durga Suktam 9.mp3 */; };
+		355E34C01DBBA3280015691E /* 10 Durga Suktam 10.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355E34B11DBBA3280015691E /* 10 Durga Suktam 10.mp3 */; };
+		355E34C11DBBA3280015691E /* 11 Durga Suktam 11.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355E34B21DBBA3280015691E /* 11 Durga Suktam 11.mp3 */; };
+		355E34C21DBBA3280015691E /* 12 Durga Suktam 12.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355E34B31DBBA3280015691E /* 12 Durga Suktam 12.mp3 */; };
+		355E34C31DBBA3280015691E /* 13 Durga Suktam 13.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355E34B41DBBA3280015691E /* 13 Durga Suktam 13.mp3 */; };
+		355E34C41DBBA3280015691E /* 14 Durga Suktam 14.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355E34B51DBBA3280015691E /* 14 Durga Suktam 14.mp3 */; };
+		355E34C51DBBA3280015691E /* 15 Durga Suktam 15.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355E34B61DBBA3280015691E /* 15 Durga Suktam 15.mp3 */; };
 		356F2FA01DBA81910089FA83 /* durga-sukhtam.plist in Resources */ = {isa = PBXBuildFile; fileRef = 356F2F9F1DBA81910089FA83 /* durga-sukhtam.plist */; };
 		356F2FA21DBA83040089FA83 /* Stanza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356F2FA11DBA83040089FA83 /* Stanza.swift */; };
 		356F2FA41DBA841D0089FA83 /* StanzaPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356F2FA31DBA841D0089FA83 /* StanzaPlayer.swift */; };
@@ -52,6 +67,21 @@
 		352189781DB90255004B9BE7 /* Durga_SukhtamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Durga_SukhtamUITests.swift; sourceTree = "<group>"; };
 		3521897A1DB90255004B9BE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		352189881DBA640B004B9BE7 /* LearnVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LearnVC.swift; sourceTree = "<group>"; };
+		355E34A81DBBA3280015691E /* 01 Durga Suktam 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "01 Durga Suktam 1.mp3"; sourceTree = "<group>"; };
+		355E34A91DBBA3280015691E /* 02 Durga Suktam 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "02 Durga Suktam 2.mp3"; sourceTree = "<group>"; };
+		355E34AA1DBBA3280015691E /* 03 Durga Suktam 3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "03 Durga Suktam 3.mp3"; sourceTree = "<group>"; };
+		355E34AB1DBBA3280015691E /* 04 Durga Suktam 4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "04 Durga Suktam 4.mp3"; sourceTree = "<group>"; };
+		355E34AC1DBBA3280015691E /* 05 Durga Suktam 5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "05 Durga Suktam 5.mp3"; sourceTree = "<group>"; };
+		355E34AD1DBBA3280015691E /* 06 Durga Suktam 6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "06 Durga Suktam 6.mp3"; sourceTree = "<group>"; };
+		355E34AE1DBBA3280015691E /* 07 Durga Suktam 7.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "07 Durga Suktam 7.mp3"; sourceTree = "<group>"; };
+		355E34AF1DBBA3280015691E /* 08 Durga Suktam 8.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "08 Durga Suktam 8.mp3"; sourceTree = "<group>"; };
+		355E34B01DBBA3280015691E /* 09 Durga Suktam 9.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "09 Durga Suktam 9.mp3"; sourceTree = "<group>"; };
+		355E34B11DBBA3280015691E /* 10 Durga Suktam 10.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "10 Durga Suktam 10.mp3"; sourceTree = "<group>"; };
+		355E34B21DBBA3280015691E /* 11 Durga Suktam 11.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "11 Durga Suktam 11.mp3"; sourceTree = "<group>"; };
+		355E34B31DBBA3280015691E /* 12 Durga Suktam 12.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "12 Durga Suktam 12.mp3"; sourceTree = "<group>"; };
+		355E34B41DBBA3280015691E /* 13 Durga Suktam 13.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "13 Durga Suktam 13.mp3"; sourceTree = "<group>"; };
+		355E34B51DBBA3280015691E /* 14 Durga Suktam 14.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "14 Durga Suktam 14.mp3"; sourceTree = "<group>"; };
+		355E34B61DBBA3280015691E /* 15 Durga Suktam 15.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "15 Durga Suktam 15.mp3"; sourceTree = "<group>"; };
 		356F2F9F1DBA81910089FA83 /* durga-sukhtam.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "durga-sukhtam.plist"; sourceTree = "<group>"; };
 		356F2FA11DBA83040089FA83 /* Stanza.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stanza.swift; sourceTree = "<group>"; };
 		356F2FA31DBA841D0089FA83 /* StanzaPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StanzaPlayer.swift; sourceTree = "<group>"; };
@@ -105,6 +135,7 @@
 		352189571DB90255004B9BE7 /* Durga Sukhtam */ = {
 			isa = PBXGroup;
 			children = (
+				355E34A71DBBA3280015691E /* Audio */,
 				352189871DBA621D004B9BE7 /* Supporting Files */,
 				3521895A1DB90255004B9BE7 /* ViewController.swift */,
 				352189881DBA640B004B9BE7 /* LearnVC.swift */,
@@ -143,6 +174,28 @@
 				352189641DB90255004B9BE7 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		355E34A71DBBA3280015691E /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				355E34A81DBBA3280015691E /* 01 Durga Suktam 1.mp3 */,
+				355E34A91DBBA3280015691E /* 02 Durga Suktam 2.mp3 */,
+				355E34AA1DBBA3280015691E /* 03 Durga Suktam 3.mp3 */,
+				355E34AB1DBBA3280015691E /* 04 Durga Suktam 4.mp3 */,
+				355E34AC1DBBA3280015691E /* 05 Durga Suktam 5.mp3 */,
+				355E34AD1DBBA3280015691E /* 06 Durga Suktam 6.mp3 */,
+				355E34AE1DBBA3280015691E /* 07 Durga Suktam 7.mp3 */,
+				355E34AF1DBBA3280015691E /* 08 Durga Suktam 8.mp3 */,
+				355E34B01DBBA3280015691E /* 09 Durga Suktam 9.mp3 */,
+				355E34B11DBBA3280015691E /* 10 Durga Suktam 10.mp3 */,
+				355E34B21DBBA3280015691E /* 11 Durga Suktam 11.mp3 */,
+				355E34B31DBBA3280015691E /* 12 Durga Suktam 12.mp3 */,
+				355E34B41DBBA3280015691E /* 13 Durga Suktam 13.mp3 */,
+				355E34B51DBBA3280015691E /* 14 Durga Suktam 14.mp3 */,
+				355E34B61DBBA3280015691E /* 15 Durga Suktam 15.mp3 */,
+			);
+			path = Audio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,10 +313,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				355E34BB1DBBA3280015691E /* 05 Durga Suktam 5.mp3 in Resources */,
 				352189631DB90255004B9BE7 /* LaunchScreen.storyboard in Resources */,
+				355E34C21DBBA3280015691E /* 12 Durga Suktam 12.mp3 in Resources */,
 				352189601DB90255004B9BE7 /* Assets.xcassets in Resources */,
+				355E34C41DBBA3280015691E /* 14 Durga Suktam 14.mp3 in Resources */,
+				355E34C11DBBA3280015691E /* 11 Durga Suktam 11.mp3 in Resources */,
+				355E34BE1DBBA3280015691E /* 08 Durga Suktam 8.mp3 in Resources */,
+				355E34B91DBBA3280015691E /* 03 Durga Suktam 3.mp3 in Resources */,
+				355E34BA1DBBA3280015691E /* 04 Durga Suktam 4.mp3 in Resources */,
+				355E34C51DBBA3280015691E /* 15 Durga Suktam 15.mp3 in Resources */,
+				355E34BD1DBBA3280015691E /* 07 Durga Suktam 7.mp3 in Resources */,
+				355E34BF1DBBA3280015691E /* 09 Durga Suktam 9.mp3 in Resources */,
 				356F2FA01DBA81910089FA83 /* durga-sukhtam.plist in Resources */,
+				355E34B81DBBA3280015691E /* 02 Durga Suktam 2.mp3 in Resources */,
 				3521895E1DB90255004B9BE7 /* Main.storyboard in Resources */,
+				355E34B71DBBA3280015691E /* 01 Durga Suktam 1.mp3 in Resources */,
+				355E34C01DBBA3280015691E /* 10 Durga Suktam 10.mp3 in Resources */,
+				355E34BC1DBBA3280015691E /* 06 Durga Suktam 6.mp3 in Resources */,
+				355E34C31DBBA3280015691E /* 13 Durga Suktam 13.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

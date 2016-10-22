@@ -9,3 +9,5 @@ This is a rewrite of an applicationt that I currently have in the app store, whi
    - Dealing with plist files in swift is much nicer
    - Tests are easier to implement with swift
    - Swift is slowly but surely replacing some of the Objective-C naming convertions e.g. `UIBundle` is now called `Bundle`
+   - *Finally* there is audio support in the simulator! 
+
