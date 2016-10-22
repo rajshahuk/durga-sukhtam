@@ -22,7 +22,9 @@ class StanzaPlayer {
     
     private init() {
         
-        if let path = Bundle.main.path(forResource: "durga-sukhtam", ofType: "plist"),
+        let appName = Bundle.main.infoDictionary![kCFBundleNameKey as String]! as! String
+        
+        if let path = Bundle.main.path(forResource: appName, ofType: "plist"),
             let stanzaData = NSDictionary(contentsOfFile: path) {
             let eng = stanzaData.value(forKey: "english") as! NSArray
             let san = stanzaData.value(forKey: "sanskrit") as! NSArray
