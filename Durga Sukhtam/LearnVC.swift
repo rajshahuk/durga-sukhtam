@@ -17,6 +17,7 @@ class LearnVC: UIViewController, AVAudioPlayerDelegate {
     @IBOutlet weak var englishTextView: UITextView!
     @IBOutlet weak var sanskritTextView: UITextView!
     @IBOutlet weak var playPauseButton: UIBarButtonItem!
+    @IBOutlet weak var repeatButton: UIBarButtonItem!
     
     //MARK: Model needed for view
     let stanzas = StanzaPlayer.sharedInstance.stanzas
@@ -117,6 +118,14 @@ class LearnVC: UIViewController, AVAudioPlayerDelegate {
     }
     
     @IBAction func repeatButtonPressed(_ sender: UIBarButtonItem) {
+        self.isRepeating = !self.isRepeating
+        if (self.isRepeating) {
+            repeatButton.tintColor = UIColor.darkGray
+        }
+        else {
+            repeatButton.tintColor = self.playPauseButton.tintColor
+        }
+        
     }
     
     func handleSwipes(sender :UISwipeGestureRecognizer) {
