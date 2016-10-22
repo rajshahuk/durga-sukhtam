@@ -19,8 +19,10 @@ class LearnVC: UIViewController, AVAudioPlayerDelegate {
     @IBOutlet weak var playPauseButton: UIBarButtonItem!
     
     //MARK: Model needed for view
-    let stanzas = StanzaPlayer.sharedInstance.stanzas;
-    var currentIndex = 0;
+    let stanzas = StanzaPlayer.sharedInstance.stanzas
+    var currentIndex = 0
+    var isRepeating = false
+    var isPlaying = false
     
     var audioPlayer = AVAudioPlayer();
     
@@ -64,7 +66,7 @@ class LearnVC: UIViewController, AVAudioPlayerDelegate {
         loadStanzaIntoView(index: currentIndex)
         UIView.transition(with: sanskritTextView, duration: 1, options: UIViewAnimationOptions.transitionFlipFromLeft, animations: nil, completion: nil)
         UIView.transition(with: englishTextView, duration: 1, options: UIViewAnimationOptions.transitionFlipFromLeft, animations: nil, completion: nil)
-        let isPlaying = audioPlayer.isPlaying;
+
         setupAudioPlayer()
         if (isPlaying) {
             audioPlayer.play()
@@ -81,7 +83,7 @@ class LearnVC: UIViewController, AVAudioPlayerDelegate {
         loadStanzaIntoView(index: currentIndex)
         UIView.transition(with: sanskritTextView, duration: 1, options: UIViewAnimationOptions.transitionFlipFromRight, animations: nil, completion: nil)
         UIView.transition(with: englishTextView, duration: 1, options: UIViewAnimationOptions.transitionFlipFromRight, animations: nil, completion: nil)
-        let isPlaying = audioPlayer.isPlaying;
+
         setupAudioPlayer()
         if (isPlaying) {
             audioPlayer.play()
@@ -93,11 +95,13 @@ class LearnVC: UIViewController, AVAudioPlayerDelegate {
     @IBAction func playButtonPressed(_ sender: UIBarButtonItem) {
         print("Play Pressed")
         if (audioPlayer.isPlaying) {
-            audioPlayer.pause();
+            audioPlayer.pause()
+            self.isPlaying = false;
             self.playPauseButton.image = #imageLiteral(resourceName: "play-button-bar")
         }
         else {
-            audioPlayer.play();
+            audioPlayer.play()
+            self.isPlaying = true;
             self.playPauseButton.image = #imageLiteral(resourceName: "pause-button-bar")
         }
     }
@@ -110,6 +114,9 @@ class LearnVC: UIViewController, AVAudioPlayerDelegate {
     @IBAction func remindButtonPressed(_ sender: UIBarButtonItem) {
         print("Rewind Pressed")
         previous()
+    }
+    
+    @IBAction func repeatButtonPressed(_ sender: UIBarButtonItem) {
     }
     
     func handleSwipes(sender :UISwipeGestureRecognizer) {
@@ -132,7 +139,18 @@ class LearnVC: UIViewController, AVAudioPlayerDelegate {
         catch {
             print(error)
         }
-        
+    }
+    
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        if (!isRepeating) {
+            self.next()
+        }
+        else {
+            if (isPlaying) {
+                self.setupAudioPlayer()
+                audioPlayer.play()
+            }
+        }
     }
     
 }

@@ -79,7 +79,11 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="5fv-o7-CVO"/>
-                                    <barButtonItem image="repeat-button-bar" id="FgM-L8-i16"/>
+                                    <barButtonItem image="repeat-button-bar" id="FgM-L8-i16">
+                                        <connections>
+                                            <action selector="repeatButtonPressed:" destination="4ub-iv-UXq" id="tsY-4t-xPv"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="STANZA LABEL X / Y" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XC1-05-R8m">
