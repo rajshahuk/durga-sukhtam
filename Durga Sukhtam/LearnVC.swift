@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import MediaPlayer
 
 class LearnVC: UIViewController, AVAudioPlayerDelegate {
     
@@ -27,6 +28,12 @@ class LearnVC: UIViewController, AVAudioPlayerDelegate {
     var isPlaying = false
     
     var audioPlayer = AVAudioPlayer();
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.becomeFirstResponder()
+        UIApplication.shared.beginReceivingRemoteControlEvents()
+    }
     
     
     override func viewDidLoad() {
@@ -52,6 +59,38 @@ class LearnVC: UIViewController, AVAudioPlayerDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override var canBecomeFirstResponder : Bool {
+        return true
+    }
+    
+    override func remoteControlReceived(with event: UIEvent?) {
+        let eventSubtype = event!.subtype
+        if (event!.type == UIEventType.remoteControl) {
+            switch eventSubtype {
+            case UIEventSubtype.remoteControlTogglePlayPause:
+                playPauseToggled()
+                break
+            case UIEventSubtype.remoteControlPlay:
+                playPauseToggled()
+                break
+            case UIEventSubtype.remoteControlPause:
+                playPauseToggled()
+                break
+            case UIEventSubtype.remoteControlStop:
+                playPauseToggled()
+                break
+            case UIEventSubtype.remoteControlNextTrack:
+                next()
+                break
+            case UIEventSubtype.remoteControlPreviousTrack:
+                previous()
+                break
+            default:
+                break
+            }
+        }
     }
     
     func loadStanzaIntoView(index: Int)  {
@@ -96,9 +135,7 @@ class LearnVC: UIViewController, AVAudioPlayerDelegate {
 
     }
     
-    // MARK: UI actions
-    @IBAction func playButtonPressed(_ sender: UIBarButtonItem) {
-        print("Play Pressed")
+    func playPauseToggled() {
         if (audioPlayer.isPlaying) {
             audioPlayer.pause()
             self.isPlaying = false;
@@ -109,6 +146,12 @@ class LearnVC: UIViewController, AVAudioPlayerDelegate {
             self.isPlaying = true;
             self.playPauseButton.image = #imageLiteral(resourceName: "pause-button-bar")
         }
+    }
+    
+    // MARK: UI actions
+    @IBAction func playButtonPressed(_ sender: UIBarButtonItem) {
+        print("Play Pressed")
+        playPauseToggled()
     }
     
     @IBAction func forwardButtonPressed(_ sender: UIBarButtonItem) {
@@ -156,6 +199,7 @@ class LearnVC: UIViewController, AVAudioPlayerDelegate {
             audioPlayer.delegate = self
             audioPlayer.enableRate = true
             audioPlayer.prepareToPlay()
+            self.setLockScreenDetails()
         }
         catch {
             print(error)
@@ -172,6 +216,13 @@ class LearnVC: UIViewController, AVAudioPlayerDelegate {
                 audioPlayer.play()
             }
         }
+    }
+    
+    func setLockScreenDetails() {
+        MPNowPlayingInfoCenter.default().nowPlayingInfo =
+            [MPMediaItemPropertyArtist : "12nines.com",
+             MPMediaItemPropertyTitle : stanzaLabel.text!,
+             MPMediaItemPropertyAlbumTitle : "Durga Sukhtam"]
     }
     
 }
