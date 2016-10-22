@@ -65,5 +65,17 @@
             <string>नाक॑स्य पृ॒ष्ठम॒भि स॒ंवसा॑नॊ॒ वैष्ण॑वीं लॊ॒क इ॒ह मा॑दयन्ताम् ॥</string>
             <string>ॐ का॒त्या॒य॒नाय॑ वि॒द्महॆ॑ कन्यकु॒मारि॑ धीमहि । तन्नॊ॑ दुर्गिः प्रचॊ॒दया॓त् ॥</string>
         </array>
+        <key>playbackRateLabel</key>
+        <array>
+            <string>NORMAL</string>
+            <string>FAST</string>
+            <string>SLOW</string>
+        </array>
+        <key>playbackRate</key>
+        <array>
+            <string>1.0</string>
+            <string>1.25</string>
+            <string>0.75</string>
+        </array>
     </dict>
 </plist>

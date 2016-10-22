@@ -30,8 +30,25 @@ class Durga_SukhtamTests: XCTestCase {
     
     func testStanzaPlayer() {
         let s = StanzaPlayer.sharedInstance.stanzas;
-        assert(s.count > 0, "Asserting that the size of stanzas in greater than 0");
+        assert(s.count > 0, "Asserting that the size of stanzas in greater than 0")
         assert(s.count == 15, "Asserting there are 15 stanzas")
+    }
+    
+    func testPlaybankRates() {
+        let p = PlaybackRates.sharedInstance.playbackRates
+        assert(p.count == 3, "Asserting that there are 3 items in the playback rates:")
+        var pp = PlaybackRates.sharedInstance.getCurrentPlaybackRate()
+        assert(pp.playbackName == "NORMAL");
+        assert(pp.playbackRate == "1.0");
+        pp = PlaybackRates.sharedInstance.incrementPlaybackRate();
+        assert(pp.playbackName == "FAST");
+        assert(pp.playbackRate == "1.25");
+        pp = PlaybackRates.sharedInstance.incrementPlaybackRate();
+        assert(pp.playbackName == "SLOW");
+        assert(pp.playbackRate == "0.75");
+        pp = PlaybackRates.sharedInstance.incrementPlaybackRate();
+        assert(pp.playbackName == "NORMAL");
+        assert(pp.playbackRate == "1.0");
     }
     
     func testPerformanceExample() {

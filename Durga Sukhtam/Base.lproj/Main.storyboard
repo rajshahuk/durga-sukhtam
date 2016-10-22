@@ -61,7 +61,11 @@
                                 <frame key="frameInset" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="NORMAL" id="HKA-U8-Xnj"/>
+                                    <barButtonItem title="RATE" id="HKA-U8-Xnj">
+                                        <connections>
+                                            <action selector="playRateButtonPressed:" destination="4ub-iv-UXq" id="VPO-zw-ate"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="hSd-oE-Tkx"/>
                                     <barButtonItem systemItem="rewind" id="Xv2-Nq-CY5">
                                         <connections>
@@ -115,6 +119,7 @@
                     <connections>
                         <outlet property="englishTextView" destination="uFh-3q-Elu" id="TnK-7T-j5w"/>
                         <outlet property="playPauseButton" destination="zzD-z9-CvU" id="zp6-3B-ldD"/>
+                        <outlet property="playRateLabel" destination="HKA-U8-Xnj" id="kQz-iz-wD9"/>
                         <outlet property="repeatButton" destination="FgM-L8-i16" id="J5e-BV-Ip7"/>
                         <outlet property="sanskritTextView" destination="x14-fZ-xHy" id="wrY-oN-FRq"/>
                         <outlet property="stanzaLabel" destination="XC1-05-R8m" id="FMT-gi-pf7"/>

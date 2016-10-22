@@ -18,6 +18,7 @@ class LearnVC: UIViewController, AVAudioPlayerDelegate {
     @IBOutlet weak var sanskritTextView: UITextView!
     @IBOutlet weak var playPauseButton: UIBarButtonItem!
     @IBOutlet weak var repeatButton: UIBarButtonItem!
+    @IBOutlet weak var playRateLabel: UIBarButtonItem!
     
     //MARK: Model needed for view
     let stanzas = StanzaPlayer.sharedInstance.stanzas
@@ -27,10 +28,13 @@ class LearnVC: UIViewController, AVAudioPlayerDelegate {
     
     var audioPlayer = AVAudioPlayer();
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title! = "Learn"
         loadStanzaIntoView(index: currentIndex)
+        
+        playRateLabel.title = PlaybackRates.sharedInstance.getCurrentPlaybackRate().playbackName
         
         setupAudioPlayer()
         
@@ -128,6 +132,13 @@ class LearnVC: UIViewController, AVAudioPlayerDelegate {
         
     }
     
+    @IBAction func playRateButtonPressed(_ sender: UIBarButtonItem) {
+        let p = PlaybackRates.sharedInstance.incrementPlaybackRate()
+        playRateLabel.title = p.playbackName
+        print("New playback rate: \(p.playbackRate)")
+        self.audioPlayer.rate = p.floatValue();
+    }
+    
     func handleSwipes(sender :UISwipeGestureRecognizer) {
         if (sender.direction == .left) {
             previous()
@@ -143,6 +154,7 @@ class LearnVC: UIViewController, AVAudioPlayerDelegate {
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: url)
             audioPlayer.delegate = self
+            audioPlayer.enableRate = true
             audioPlayer.prepareToPlay()
         }
         catch {
