@@ -58,7 +58,7 @@ class LearnVC: UIViewController, AVAudioPlayerDelegate {
         rightSwipe.direction = .right
         self.view.addGestureRecognizer(leftSwipe)
         self.view.addGestureRecognizer(rightSwipe)
-                
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -225,10 +225,16 @@ class LearnVC: UIViewController, AVAudioPlayerDelegate {
     }
     
     func setLockScreenDetails() {
+        
+        let a = MPMediaItemArtwork(image: albumArtImage.image!)
+        
+//        let a = MPMediaItemArtwork(boundsSize: albumArtImage.image!.size, requestHandler: albumArtImage.image!)
+        
         MPNowPlayingInfoCenter.default().nowPlayingInfo =
             [MPMediaItemPropertyArtist : "12nines.com",
              MPMediaItemPropertyTitle : stanzaLabel.text!,
-             MPMediaItemPropertyAlbumTitle : "Durga Sukhtam"]
+             MPMediaItemPropertyAlbumTitle : "Durga Sukhtam",
+             MPMediaItemPropertyArtwork : a]
     }
     
     
