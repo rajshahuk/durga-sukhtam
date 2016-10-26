@@ -184,10 +184,10 @@ class LearnVC: UIViewController, AVAudioPlayerDelegate {
     
     func handleSwipes(sender :UISwipeGestureRecognizer) {
         if (sender.direction == .left) {
-            previous()
+            next()
         }
         if (sender.direction == .right) {
-            next()
+            previous()
         }
     }
     
