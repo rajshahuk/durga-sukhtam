@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,11 +16,11 @@
                         <viewControllerLayoutGuide type="bottom" id="9tq-YE-xYg"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ksu-KB-CDZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="efu-tI-sW1">
-                                <frame key="frameInset" height="44"/>
+                                <frame key="frameInset" height="44" maxY="1"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="RATE" id="HKA-U8-Xnj">
@@ -51,31 +52,59 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="STANZA LABEL X / Y" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XC1-05-R8m">
-                                <frame key="frameInset" minX="16" minY="20" width="343" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="26"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="ॐ ॥ जा॒तवॆ॑दसॆ सुनवाम॒ सॊम॑ मरातीय॒तॊ निद॑हाति॒ वॆदः॑ ।" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x14-fZ-xHy">
-                                <frame key="frameInset" minX="16" minY="332" width="343" height="140"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="oṃ kātyāyanāya’ vidmahe’ kanyakumāri’ dhīmahi | tanno’ durgiḥ pracodayā”t ||" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uFh-3q-Elu">
-                                <frame key="frameInset" minX="16" minY="108" width="343" height="140"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="26"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2As-tw-dWi">
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zMD-DA-pfL">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DURGA SUKHTAM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6lv-rI-K2d">
+                                                <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="STANZA LABEL X / Y" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XC1-05-R8m">
+                                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="26"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="200" verticalHuggingPriority="200" horizontalCompressionResistancePriority="45" verticalCompressionResistancePriority="45" image="album-art" translatesAutoresizingMaskIntoConstraints="NO" id="bob-KS-czF">
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
+                                                </accessibility>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="1Af-zF-8bZ">
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="oṃ kātyāyanāya’ vidmahe’ kanyakumāri’ dhīmahi | tanno’ durgiḥ pracodayā”t ||" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uFh-3q-Elu">
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="26"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" horizontalHuggingPriority="248" verticalHuggingPriority="248" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="ॐ ॥ जा॒तवॆ॑दसॆ सुनवाम॒ सॊम॑ मरातीय॒तॊ निद॑हाति॒ वॆदः॑ ।" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x14-fZ-xHy">
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="uFh-3q-Elu" firstAttribute="height" secondItem="x14-fZ-xHy" secondAttribute="height" id="Ins-XY-bXU"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="1Af-zF-8bZ" firstAttribute="height" secondItem="zMD-DA-pfL" secondAttribute="height" id="ab4-Lp-BS6"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2As-tw-dWi" firstAttribute="leading" secondItem="ksu-KB-CDZ" secondAttribute="leadingMargin" id="Hx8-4a-fFV"/>
+                            <constraint firstItem="2As-tw-dWi" firstAttribute="top" secondItem="P8Y-OI-evj" secondAttribute="bottom" id="bfq-1h-7mc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2As-tw-dWi" secondAttribute="trailing" id="c9P-WX-qK0"/>
+                            <constraint firstItem="9tq-YE-xYg" firstAttribute="top" secondItem="2As-tw-dWi" secondAttribute="bottom" constant="60" id="pHE-UQ-CJ1"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="englishTextView" destination="uFh-3q-Elu" id="TnK-7T-j5w"/>
@@ -84,14 +113,16 @@
                         <outlet property="repeatButton" destination="FgM-L8-i16" id="J5e-BV-Ip7"/>
                         <outlet property="sanskritTextView" destination="x14-fZ-xHy" id="wrY-oN-FRq"/>
                         <outlet property="stanzaLabel" destination="XC1-05-R8m" id="FMT-gi-pf7"/>
+                        <outlet property="toolbar" destination="efu-tI-sW1" id="zOI-ur-nuj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pwW-OQ-cLr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1989.5999999999999" y="80.50974512743629"/>
+            <point key="canvasLocation" x="2039" y="15"/>
         </scene>
     </scenes>
     <resources>
+        <image name="album-art" width="512" height="512"/>
         <image name="play-button-bar" width="30" height="30"/>
         <image name="repeat-button-bar" width="30" height="30"/>
     </resources>

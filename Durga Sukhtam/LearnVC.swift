@@ -20,17 +20,22 @@ class LearnVC: UIViewController, AVAudioPlayerDelegate {
     @IBOutlet weak var playPauseButton: UIBarButtonItem!
     @IBOutlet weak var repeatButton: UIBarButtonItem!
     @IBOutlet weak var playRateLabel: UIBarButtonItem!
+    @IBOutlet weak var toolbar: UIToolbar!
     
     //MARK: Model needed for view
     let stanzas = StanzaPlayer.sharedInstance.stanzas
     var currentIndex = 0
     var isRepeating = false
     var isPlaying = false
-    
     var audioPlayer = AVAudioPlayer();
+    
+    // background
+    var gradientLayer: CAGradientLayer!
+    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        createGradientLayer()
         self.becomeFirstResponder()
         UIApplication.shared.beginReceivingRemoteControlEvents()
     }
@@ -223,6 +228,16 @@ class LearnVC: UIViewController, AVAudioPlayerDelegate {
             [MPMediaItemPropertyArtist : "12nines.com",
              MPMediaItemPropertyTitle : stanzaLabel.text!,
              MPMediaItemPropertyAlbumTitle : "Durga Sukhtam"]
+    }
+    
+    
+    
+    func createGradientLayer() {
+        gradientLayer = CAGradientLayer()
+        gradientLayer.frame = self.view.bounds
+        gradientLayer.colors = [UIColor.orange.cgColor, UIColor.yellow.cgColor]
+//        gradientLayer.below
+        self.view.layer.insertSublayer(gradientLayer, below: toolbar.layer)
     }
     
 }
