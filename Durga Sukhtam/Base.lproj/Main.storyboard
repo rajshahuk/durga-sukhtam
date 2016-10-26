@@ -52,26 +52,26 @@
                                 </items>
                             </toolbar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="STANZA LABEL X / Y" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XC1-05-R8m">
-                                <frame key="frameInset" minX="16" minY="72" width="343" height="43"/>
+                                <frame key="frameInset" minX="16" minY="20" width="343" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="oṃ kātyāyanāya’ vidmahe’ kanyakumāri’ dhīmahi | tanno’ durgiḥ pracodayā”t ||" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uFh-3q-Elu">
-                                <frame key="frameInset" minX="16" minY="123" width="343" height="193"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="ॐ ॥ जा॒तवॆ॑दसॆ सुनवाम॒ सॊम॑ मरातीय॒तॊ निद॑हाति॒ वॆदः॑ ।" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x14-fZ-xHy">
+                                <frame key="frameInset" minX="16" minY="332" width="343" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="ॐ ॥ जा॒तवॆ॑दसॆ सुनवाम॒ सॊम॑ मरातीय॒तॊ निद॑हाति॒ वॆदः॑ ।" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x14-fZ-xHy">
-                                <frame key="frameInset" minX="16" minY="343" width="343" height="193"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="oṃ kātyāyanāya’ vidmahe’ kanyakumāri’ dhīmahi | tanno’ durgiḥ pracodayā”t ||" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uFh-3q-Elu">
+                                <frame key="frameInset" minX="16" minY="108" width="343" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="26"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
