@@ -21,6 +21,7 @@ class LearnVC: UIViewController, AVAudioPlayerDelegate {
     @IBOutlet weak var repeatButton: UIBarButtonItem!
     @IBOutlet weak var playRateLabel: UIBarButtonItem!
     @IBOutlet weak var toolbar: UIToolbar!
+    @IBOutlet weak var albumArtImage: UIImageView!
     
     //MARK: Model needed for view
     let stanzas = StanzaPlayer.sharedInstance.stanzas
@@ -57,7 +58,7 @@ class LearnVC: UIViewController, AVAudioPlayerDelegate {
         rightSwipe.direction = .right
         self.view.addGestureRecognizer(leftSwipe)
         self.view.addGestureRecognizer(rightSwipe)
-        
+                
         // Do any additional setup after loading the view, typically from a nib.
     }
     
