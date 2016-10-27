@@ -16,7 +16,7 @@
                         <viewControllerLayoutGuide type="bottom" id="9tq-YE-xYg"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ksu-KB-CDZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="efu-tI-sW1">
