@@ -49,6 +49,13 @@ class LearnVC: UIViewController, AVAudioPlayerDelegate {
         
         playRateLabel.title = PlaybackRates.sharedInstance.getCurrentPlaybackRate().playbackName
         
+        let audioSession = AVAudioSession.sharedInstance();
+        do {
+            try audioSession.setCategory(AVAudioSessionCategoryPlayback)
+        } catch {
+            print(error)
+        }
+        
         setupAudioPlayer()
         
         // swipes stuff

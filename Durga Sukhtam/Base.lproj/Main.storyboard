@@ -56,14 +56,12 @@
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zMD-DA-pfL">
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="DURGA SUKHTAM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6lv-rI-K2d">
-                                                <frame key="frameInset" width="374" height="38"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DURGA SUKHTAM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6lv-rI-K2d">
                                                 <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" ambiguous="YES" text="STANZA LABEL X / Y" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XC1-05-R8m">
-                                                <frame key="frameInset" minY="46" width="374" height="32"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="STANZA LABEL X / Y" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XC1-05-R8m">
                                                 <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="26"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -103,7 +101,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2As-tw-dWi" firstAttribute="leading" secondItem="ksu-KB-CDZ" secondAttribute="leadingMargin" id="Hx8-4a-fFV"/>
-                            <constraint firstItem="2As-tw-dWi" firstAttribute="top" secondItem="P8Y-OI-evj" secondAttribute="bottom" id="bfq-1h-7mc"/>
+                            <constraint firstItem="2As-tw-dWi" firstAttribute="top" secondItem="P8Y-OI-evj" secondAttribute="bottom" constant="10" id="bfq-1h-7mc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2As-tw-dWi" secondAttribute="trailing" id="c9P-WX-qK0"/>
                             <constraint firstItem="9tq-YE-xYg" firstAttribute="top" secondItem="2As-tw-dWi" secondAttribute="bottom" constant="60" id="pHE-UQ-CJ1"/>
                         </constraints>
