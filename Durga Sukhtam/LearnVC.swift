@@ -51,7 +51,8 @@ class LearnVC: UIViewController, AVAudioPlayerDelegate {
         
         let audioSession = AVAudioSession.sharedInstance();
         do {
-            try audioSession.setCategory(AVAudioSessionCategoryPlayback)
+            try audioSession.setCategory(AVAudioSession.Category.playback, mode: AVAudioSession.Mode.default)
+//            try audioSession.setCategory(convertFromAVAudioSessionCategory(AVAudioSession.Category.playback), mode: AVAudioSession.Mode.default)
         } catch {
             print(error)
         }
@@ -80,24 +81,24 @@ class LearnVC: UIViewController, AVAudioPlayerDelegate {
     
     override func remoteControlReceived(with event: UIEvent?) {
         let eventSubtype = event!.subtype
-        if (event!.type == UIEventType.remoteControl) {
+        if (event!.type == UIEvent.EventType.remoteControl) {
             switch eventSubtype {
-            case UIEventSubtype.remoteControlTogglePlayPause:
+            case UIEvent.EventSubtype.remoteControlTogglePlayPause:
                 playPauseToggled()
                 break
-            case UIEventSubtype.remoteControlPlay:
+            case UIEvent.EventSubtype.remoteControlPlay:
                 playPauseToggled()
                 break
-            case UIEventSubtype.remoteControlPause:
+            case UIEvent.EventSubtype.remoteControlPause:
                 playPauseToggled()
                 break
-            case UIEventSubtype.remoteControlStop:
+            case UIEvent.EventSubtype.remoteControlStop:
                 playPauseToggled()
                 break
-            case UIEventSubtype.remoteControlNextTrack:
+            case UIEvent.EventSubtype.remoteControlNextTrack:
                 next()
                 break
-            case UIEventSubtype.remoteControlPreviousTrack:
+            case UIEvent.EventSubtype.remoteControlPreviousTrack:
                 previous()
                 break
             default:
@@ -121,8 +122,8 @@ class LearnVC: UIViewController, AVAudioPlayerDelegate {
             currentIndex = 0;
         }
         loadStanzaIntoView(index: currentIndex)
-        UIView.transition(with: sanskritTextView, duration: 1, options: UIViewAnimationOptions.transitionFlipFromLeft, animations: nil, completion: nil)
-        UIView.transition(with: englishTextView, duration: 1, options: UIViewAnimationOptions.transitionFlipFromLeft, animations: nil, completion: nil)
+        UIView.transition(with: sanskritTextView, duration: 1, options: UIView.AnimationOptions.transitionFlipFromLeft, animations: nil, completion: nil)
+        UIView.transition(with: englishTextView, duration: 1, options: UIView.AnimationOptions.transitionFlipFromLeft, animations: nil, completion: nil)
 
         setupAudioPlayer()
         if (isPlaying) {
@@ -138,8 +139,8 @@ class LearnVC: UIViewController, AVAudioPlayerDelegate {
             currentIndex = stanzas.count-1;
         }
         loadStanzaIntoView(index: currentIndex)
-        UIView.transition(with: sanskritTextView, duration: 1, options: UIViewAnimationOptions.transitionFlipFromRight, animations: nil, completion: nil)
-        UIView.transition(with: englishTextView, duration: 1, options: UIViewAnimationOptions.transitionFlipFromRight, animations: nil, completion: nil)
+        UIView.transition(with: sanskritTextView, duration: 1, options: UIView.AnimationOptions.transitionFlipFromRight, animations: nil, completion: nil)
+        UIView.transition(with: englishTextView, duration: 1, options: UIView.AnimationOptions.transitionFlipFromRight, animations: nil, completion: nil)
 
         setupAudioPlayer()
         if (isPlaying) {
@@ -195,7 +196,7 @@ class LearnVC: UIViewController, AVAudioPlayerDelegate {
         self.audioPlayer.rate = p.floatValue();
     }
     
-    func handleSwipes(sender :UISwipeGestureRecognizer) {
+    @objc func handleSwipes(sender :UISwipeGestureRecognizer) {
         if (sender.direction == .left) {
             next()
         }
@@ -233,15 +234,18 @@ class LearnVC: UIViewController, AVAudioPlayerDelegate {
     
     func setLockScreenDetails() {
         
-        let a = MPMediaItemArtwork(image: albumArtImage.image!)
+    
         
-//        let a = MPMediaItemArtwork(boundsSize: albumArtImage.image!.size, requestHandler: albumArtImage.image!)
-        
+        let image = albumArtImage.image!
+        let albumArt = MPMediaItemArtwork.init(boundsSize: image.size, requestHandler: { (size) -> UIImage in
+            return image
+        })
+
         MPNowPlayingInfoCenter.default().nowPlayingInfo =
             [MPMediaItemPropertyArtist : "12nines.com",
              MPMediaItemPropertyTitle : stanzaLabel.text!,
              MPMediaItemPropertyAlbumTitle : "Durga Sukhtam",
-             MPMediaItemPropertyArtwork : a]
+             MPMediaItemPropertyArtwork : albumArt]
     }
     
     
@@ -256,3 +260,8 @@ class LearnVC: UIViewController, AVAudioPlayerDelegate {
     
 }
 
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromAVAudioSessionCategory(_ input: AVAudioSession.Category) -> String {
+	return input.rawValue
+}
